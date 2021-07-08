@@ -1,4 +1,4 @@
-baseUrl = "http://localhost:3001";
+baseUrl = "https://knack-back.herokuapp.com";
 // $(function () {
 //   $(window).on("scroll", function () {
 //     if ($(window).scrollTop() > 10) {
