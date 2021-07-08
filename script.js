@@ -1,4 +1,4 @@
-baseUrl = "https://knack-back.herokuapp.com";
+baseUrl = "http://localhost:3001";
 // $(function () {
 //   $(window).on("scroll", function () {
 //     if ($(window).scrollTop() > 10) {
@@ -32,10 +32,10 @@ function userLogin(data) {
 
       console.log("token:" + response.token);
 
-    //   document.cookie = "authToken=" + response.token;
+      document.cookie = "authToken=" + response.token;
       console.log("hey there")
     //   document.cookie = "authToken=" + response.token;
-    //   window.location.href = "./home.html";
+      window.location.href = "./home.html";
     },
     headers: {
       Accept: "application/json; charset=utf-8",
