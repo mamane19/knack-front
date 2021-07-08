@@ -23,11 +23,24 @@
           </button>
         </div>
         <div class="social-icons">
-          <h2>Wassac Dashboard</h2>
+          <h2>Knack Dashboard</h2>
         </div>
-        <form id="login" class="input-group" action="/home.html">
-          <input type="text" class="input-field" placeholder="Email" required />
+        <form
+          id="login"
+          class="input-group"
+          onsubmit="event.preventDefault(); onLoginDetailsSubmit();"
+        >
           <input
+            type="text"
+            id="email_address"
+            class="input-field"
+            name="email_address"
+            placeholder="Email"
+            required
+          />
+          <input
+            id="password"
+            name="password"
             type="password"
             class="input-field"
             placeholder="Enter Password"
@@ -38,20 +51,30 @@
           >
           <button type="submit" class="submit-btn">Login</button>
         </form>
-        <form id="signup" class="input-group" action="/home.html">
+        <form
+          id="signup"
+          class="input-group"
+          onsubmit="event.preventDefault(); onCreateUser();"
+        >
           <input
+            id="email-create"
+            name="email_address"
             type="text"
             class="input-field"
             placeholder="Enter email"
             required
           />
           <input
+            id="name-create"
+            name="user_name"
             type="text"
             class="input-field"
             placeholder="Enter Username"
             required
           />
           <input
+            id="password-create"
+            name="password"
             type="password"
             class="input-field"
             placeholder="Enter Password"
@@ -68,7 +91,7 @@
       var x = document.getElementById("login");
       var y = document.getElementById("signup");
       var z = document.getElementById("btn");
-      var w = document.getElementById("");
+      // var w = document.getElementById("");
 
       function signup() {
         x.style.left = "-400px";
@@ -82,5 +105,7 @@
         z.style.left = "0px";
       }
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
