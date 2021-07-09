@@ -29,7 +29,6 @@ function userLogin(data) {
       console.log("token:" + response.token);
 
       document.cookie = "authToken=" + response.token;
-      console.log("hey there");
       //   document.cookie = "authToken=" + response.token;
       window.location.href = "./home.html";
     },
