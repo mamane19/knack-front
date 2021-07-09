@@ -22,7 +22,7 @@ function userLogin(data) {
       if (response.success) {
         alert("Logged in successfully....");
       } else {
-        alert(response.error.msg);
+        // alert(response.error.msg);
       }
       console.log(data);
 
