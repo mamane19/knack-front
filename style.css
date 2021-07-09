@@ -111,8 +111,20 @@ span {
 #signup {
   left: 450px;
 }
+#message {
+  display: flex;
+  justify-content: center;
+}
+#message-box {
+  margin: 0;
+  padding: 8px;
+  text-align: center;
+  color: white;
+  background-color: red;
+  border-radius: 2px;
+}
 .social-icons {
-  margin: 30px auto;
+  padding: 10px auto;
   text-align: center;
 }
 .social-icons img {
