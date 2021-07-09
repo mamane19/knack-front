@@ -19,7 +19,7 @@ function userLogin(data) {
     cache: false,
     success: function (response) {
       var data = response.user;
-      if (respoonse.success) {
+      if (response.success) {
         alert("Logged in successfully....");
       } else {
         alert(data.error.msg);
