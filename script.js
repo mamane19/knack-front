@@ -1,4 +1,4 @@
-baseUrl = "https://knack-back.herokuapp.com";
+baseUrl = "https://knack-back.herokuapp.com/";
 
 // SignIn / LogIn
 function onLoginDetailsSubmit() {
