@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+    rel="stylesheet"
     />
     <title>Knack | Challenge</title>
     <link rel="stylesheet" href="style.css" />
@@ -25,14 +25,15 @@
         <div class="social-icons">
           <h2>Knack Dashboard</h2>
         </div>
+        <div id="message"></div>
         <form
-          id="login"
-          class="input-group"
-          onsubmit="event.preventDefault(); onLoginDetailsSubmit();"
+        id="login"
+        class="input-group"
+        onsubmit="event.preventDefault(); onLoginDetailsSubmit();"
         >
-          <input
-            type="text"
-            id="email_address"
+        <input
+        type="text"
+        id="email_address"
             class="input-field"
             name="email_address"
             placeholder="Email"
@@ -48,45 +49,45 @@
           />
           <input type="checkbox" class="check-box" /><span
             >Remember Password</span
-          >
-          <button type="submit" class="submit-btn">Login</button>
-        </form>
-        <form
+            >
+            <button type="submit" class="submit-btn">Login</button>
+          </form>
+          <form
           id="signup"
           class="input-group"
           onsubmit="event.preventDefault(); onCreateUser();"
-        >
+          >
           <input
-            id="email-create"
-            name="email_address"
-            type="text"
-            class="input-field"
-            placeholder="Enter email"
-            required
+          id="email-create"
+          name="email_address"
+          type="text"
+          class="input-field"
+          placeholder="Enter email"
+          required
           />
           <input
-            id="name-create"
-            name="user_name"
-            type="text"
-            class="input-field"
-            placeholder="Enter Username"
-            required
+          id="name-create"
+          name="user_name"
+          type="text"
+          class="input-field"
+          placeholder="Enter Username"
+          required
           />
           <input
-            id="password-create"
-            name="password"
-            type="password"
+          id="password-create"
+          name="password"
+          type="password"
             class="input-field"
             placeholder="Enter Password"
             required
-          />
-          <input type="checkbox" class="check-box" /><span
+            />
+            <input type="checkbox" class="check-box" /><span
             >I agreed to the terms & conditions</span
-          >
-          <button type="submit" class="submit-btn">Signup</button>
-        </form>
+            >
+            <button type="submit" class="submit-btn">Signup</button>
+          </form>
+        </div>
       </div>
-    </div>
     <script>
       var x = document.getElementById("login");
       var y = document.getElementById("signup");

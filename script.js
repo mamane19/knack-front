@@ -1,13 +1,4 @@
 baseUrl = "https://knack-back.herokuapp.com";
-// $(function () {
-//   $(window).on("scroll", function () {
-//     if ($(window).scrollTop() > 10) {
-//       $(".navbar").addClass("active");
-//     } else {
-//       $(".navbar").removeClass("active");
-//     }
-//   });
-// });
 
 // SignIn / LogIn
 function onLoginDetailsSubmit() {
@@ -28,15 +19,29 @@ function userLogin(data) {
     cache: false,
     success: function (response) {
       var data = response.user;
+      if (respoonse.success) {
+        alert("Logged in successfully....");
+      } else {
+        alert(data.error.msg);
+      }
       console.log(data);
 
       console.log("token:" + response.token);
 
       document.cookie = "authToken=" + response.token;
-      console.log("hey there")
-    //   document.cookie = "authToken=" + response.token;
+      console.log("hey there");
+      //   document.cookie = "authToken=" + response.token;
       window.location.href = "./home.html";
     },
+    error: function (response) {
+      // executes only if ajax fails
+      document.getElementById("message").innerHTML =
+        "<span id='message-box'>Email or Password is wrong...</span>";
+      setTimeout(function () {
+        document.getElementById("message").innerHTML = "";
+      }, 3000);
+    },
+
     headers: {
       Accept: "application/json; charset=utf-8",
       Content_Type: "application/json; charset=utf-8",
@@ -74,7 +79,7 @@ function onCreateUser() {
   formData["user_name"] = document.getElementById("name-create").value;
   addUser(formData);
   // window.location.href = "./index.html";
-//   clearUserForm();
+  //   clearUserForm();
 }
 function addUser(data) {
   var postData = JSON.stringify(data);
@@ -88,7 +93,7 @@ function addUser(data) {
     success: function (response) {
       var data = response.data;
       console.log(data);
-    //   addUserRecordToTable(data);
+      //   addUserRecordToTable(data);
       window.location.href = "./home.html";
     },
 
